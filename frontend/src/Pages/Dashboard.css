@@ -1,0 +1,95 @@
+.funBlog{
+ 
+ padding: 10px 80px;
+}
+
+.funBlog1{
+    display: flex;
+    gap: 5px;
+}
+
+.funBlog2{
+    display: flex;
+    gap: 5px;
+}
+.btn:hover{
+    border: white;
+    background-color: teal;
+    
+    
+}
+
+
+.my-data{
+    margin-top: 40px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+ 
+  .pagination{
+    margin-top: 40px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .my-blog{
+   
+    border: 1px solid black;
+     width: 25%;
+     height: 31vh;
+    
+  }
+
+
+
+  .image-gallery{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* height: 300px; */
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    /* height: 200px; */
+  }
+ 
+  .modal{
+    border: 1px solid;
+    background-color: teal;
+    color: wheat;
+    margin: 200px auto;
+     width:50%;
+     padding: 40px;
+     border-radius: 10px;
+  }
+  .modalbtn{
+    /* border: 1px solid; */
+    padding: 50px auto ;
+    width: 200px;
+    gap: 8px;
+    margin: 5px auto;
+    justify-content: center;
+    align-items: center;
+    /* margin: 100px auto; */
+  }
+.modal input::placeholder{
+  color: wheat;
+}
+
+.modal input{
+  margin-top: 10px;
+}
+
+.editBlog{
+  /* border: 1px solid; */
+  width: max-content;
+  margin: auto;
+}
+.myBlog{
+  -webkit-text-stroke: 3px #104721;
+  color: transparent;
+}

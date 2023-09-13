@@ -1,0 +1,15 @@
+.navbar{
+    border: 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    background-color: teal;
+    color: white;
+    margin-bottom: 20px;
+   
+}
+.link {
+    color: white;
+    text-decoration: none;
+  }

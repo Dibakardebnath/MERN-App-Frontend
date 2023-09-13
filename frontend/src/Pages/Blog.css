@@ -1,0 +1,40 @@
+.parentDiv{
+/* border: 1px solid; */
+width: 70%;
+margin: 100px auto;
+
+}
+
+
+.Avatar{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    /* border: 1px solid; */
+    gap: 10px;
+}
+
+.cardBody{
+    /* background: linear-gradient(red, rgba(255,255,255,)); */
+    background: linear-gradient(to right, #cc9797, #7777c0);
+      color: aliceblue;
+}
+
+.like{
+    
+    background-color: #e6b20a;
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+  
+  
+}
+
+.btnFlex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+   
+}
