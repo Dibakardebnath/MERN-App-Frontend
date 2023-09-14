@@ -13,3 +13,11 @@
     color: white;
     text-decoration: none;
   }
+  .logoutBtn{
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+

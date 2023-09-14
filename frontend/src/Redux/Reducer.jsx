@@ -1,8 +1,9 @@
-import { GET_DELETED_DATA, GET_PERSONAL_DATA, GET_PUBLIC_DATA, GET_UPDATED_DATA } from "./ActionType"
+import { GET_AUTH_DATA, GET_DELETED_DATA, GET_PERSONAL_DATA, GET_PUBLIC_DATA, GET_UPDATED_DATA } from "./ActionType"
 
 
 
 const initialState ={
+    isAuth:false,
     Data:[],
     total:0,
     PersonalData:[]
@@ -13,12 +14,15 @@ console.log(initialState)
 
 export const Reducer=(state=initialState,{type,payload})=>{
     switch (type) {
+        case GET_AUTH_DATA:{
+            return {...state,isAuth: payload.isAuth}
+        }
         case GET_PUBLIC_DATA:{
             return {...state,Data: payload.users ,total:payload.total}
         }
         case GET_PERSONAL_DATA:{
 
-            return {...state,PersonalData:payload.users ,total:payload.total}
+            return {...state,isAuth:true,PersonalData:payload.users ,total:payload.total}
         }
 
         case GET_DELETED_DATA:{

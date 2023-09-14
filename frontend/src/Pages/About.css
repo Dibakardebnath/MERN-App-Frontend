@@ -1,0 +1,26 @@
+.welcome-heading{
+    margin: 20px auto;
+}
+.mission-text{
+    /* border: 1px solid; */
+    width: 90%;
+    margin: 20px auto;
+    font-family: "Helvetica Neue",Helvetica;
+}
+.name{
+    /* font-size: larger;
+    font-weight: bold; */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+}
+.course-name{
+   
+   font-size: 20px;
+}

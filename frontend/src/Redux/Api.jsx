@@ -25,8 +25,9 @@ export const getPersonalData=(page,value,order)=>async(dispatch)=>{
       }
     })
     
-
+   console.log(response.data)
        dispatch(personalData(response.data))
+
          //  console.log(response.data.newId)
  
    } catch (error) {

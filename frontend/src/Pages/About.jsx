@@ -3,6 +3,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import pic from '../Images/Dibakar_image.png';
 import { Footer } from "./Footer";
+import './About.css'
 
 export const About=()=>{
     const images = [
@@ -21,8 +22,8 @@ export const About=()=>{
       ];
     return (
         <Box>
-            <Heading>About us</Heading>
-            <Text>Welcome to our blog! We are passionate 
+            <Heading>About Us</Heading>
+            <Text className="welcome-heading">Welcome to our blog! We are passionate 
                 about sharing insightful content with our readers.</Text>
 
                 <Box className='image-gallery'>
@@ -35,8 +36,8 @@ export const About=()=>{
             />
             
             </Box>
-            <Heading>Our Mission</Heading>
-            <Text>Our mission is to empower individuals with valuable knowledge by
+            <Heading mt={'20px'}>Our Mission</Heading>
+            <Text className="mission-text">Our mission is to empower individuals with valuable knowledge by
                  providing a platform for insightful and informative blog 
                  content. We aim to foster a community where people can share 
                  their expertise, experiences, and ideas to inspire and educate
@@ -46,8 +47,8 @@ export const About=()=>{
              <Heading size={'md'}>Developed by</Heading>
 
              <Image m={'20px auto'} src={pic} ></Image>
-             <Text>Dibakar Debnath</Text>
-             <Text>Full Stack Web Developer</Text>
+             <Text className="name">Dibakar Debnath</Text>
+             <Text className="course-name">Full Stack Web Developer</Text>
              <Footer/>
         </Box>
     )
