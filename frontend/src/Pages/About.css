@@ -24,3 +24,15 @@
    
    font-size: 20px;
 }
+
+.sliderGif{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 70vh;
+}
+
+.image-gallery{
+    /* border: 1px solid; */
+    width: 100%;
+
+}

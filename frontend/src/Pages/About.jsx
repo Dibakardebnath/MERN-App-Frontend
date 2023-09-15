@@ -27,14 +27,14 @@ export const About=()=>{
                 about sharing insightful content with our readers.</Text>
 
                 <Box className='image-gallery'>
-            <ImageGallery items={images} 
+            {/* <ImageGallery items={images} 
             showFullscreenButton={false}
             showPlayButton={true}
             slideInterval={2000}
             slideOnThumbnailOver={true}
             showBullets={true}
-            />
-            
+            /> */}
+            <Image className="sliderGif" src="https://i.makeagif.com/media/2-07-2017/JTG6s-.gif"></Image>
             </Box>
             <Heading mt={'20px'}>Our Mission</Heading>
             <Text className="mission-text">Our mission is to empower individuals with valuable knowledge by

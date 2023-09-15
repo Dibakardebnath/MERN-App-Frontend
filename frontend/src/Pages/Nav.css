@@ -1,23 +1,329 @@
-.navbar{
-    border: 1px solid;
+.active{
+  background-color: #1dd88a;
+}
+nav{
+  border: 1px solid red;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: teal;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+nav .title{
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+nav ul{
+  display: flex;
+}
+
+nav ul li{
+  list-style: none;
+  
+}
+
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav ul li a:not(.active):hover{
+  background-color: #172554;
+}
+
+ nav .menu{
+  display: none;
+  /* display: flex; */
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+.menu span{
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+                    /* Media queries */
+@media (max-width:480px){
+  nav .menu{
     display: flex;
-    justify-content: space-around;
+  }
+  nav{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  nav ul{
+    border: 1px solid;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+   
+  }
+
+  nav ul .open{
+    display: flex;
+    border: 1px solid rgb(151, 24, 24);
+  }
+
+
+
+  nav ul li{
+    width: 100%;
+    text-align: center;
+  }
+ nav ul li a{
+    margin: 0.2rem 0.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.navbar{
+  border: 1px solid red;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ height: 8vh;
+ margin-bottom: 20px;
+ background-color: teal;
+ color: white;
+  position: sticky;
+  top: 0;
+}
+.navbar ul{
+
+  width: 80%;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
     height: 8vh;
-    background-color: teal;
-    color: white;
-    margin-bottom: 20px;
-   
+  
 }
+
+.navbar ul li{
+  list-style: none;
+}
+
 .link {
     color: white;
-    text-decoration: none;
+    display: block;
+   text-decoration: none;
+   padding: 0.5rem;
+   margin: 0 0.5rem;
+   border-radius: 0.5rem;
   }
-  .logoutBtn{
-    /* border: 1px solid; */
+.link:not(.active):hover{
+  background-color: #172554;
+} */
+ 
+  /* .logoutBtn{
+   
     display: flex;
     align-items: center;
     gap: 5px;
+  } */
+
+/* 
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chat */
+/* Define your regular navbar styles here */
+
+/* Mobile Navigation */
+/* 
+/* Define your regular navbar styles here */
+
+/* Mobile Navigation */
+/*.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 10px;
+
+
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+ 
+.mobile-nav.open {
+  display: block;
+  animation-name: slide-in;
+}
+
+
+.hamburger-button {
+  color: #333; 
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
   }
+  to {
+    transform: translateX(0);
+  }
+}
 
 
+*/
