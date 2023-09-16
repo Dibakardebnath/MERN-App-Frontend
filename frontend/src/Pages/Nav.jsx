@@ -7,6 +7,7 @@ import { useState } from "react"
 export const Nav=()=>{
     const {isAuth,PersonalData}=useSelector((store)=>store)
     const [menuOpen, setMenuOpen]=useState(false)
+    console.log(menuOpen)
     const dispath=useDispatch()
     const handlBtn=()=>{
         
@@ -15,7 +16,7 @@ export const Nav=()=>{
 
     }
 
-    console.log(isAuth)
+    // console.log(isAuth)
     return <nav>
       <ul className={menuOpen?"open":""}>
         <li><NavLink to={'/'} className="link">Home</NavLink></li>
@@ -24,9 +25,7 @@ export const Nav=()=>{
         <li> <NavLink to={'/About'} className="link">About</NavLink></li>
       </ul>
 
-      <div className="menu" onClick={()=>{
-        setMenuOpen(!menuOpen)
-      }}>
+      <div className="menu" onClick={()=>setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
@@ -34,8 +33,8 @@ export const Nav=()=>{
         
       <NavLink to={'/register'} className="title">{isAuth?
        <Box className="logoutBtn">
-     <Button onClick={()=>handlBtn()}>logout</Button>
-      <Avatar className="avatar-style" name={PersonalData[0].email} src="" />
+     <Button onClick={()=>handlBtn()}>Logout</Button>
+      <Avatar  size='sm' className="avatar-style" name={PersonalData[0].email} src="" />
 
        </Box>
        :"Register"}</NavLink>
@@ -43,66 +42,3 @@ export const Nav=()=>{
        
     </nav>
 }
-
-
-// import { Button, Box, IconButton } from "@chakra-ui/react";
-// import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-// import { useState } from "react"
-// export const Nav = () => {
-//   const { isAuth, PersonalData } = useSelector((store) => store);
-//   const dispatch = useDispatch();
-//   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-
-//   const handleBtn = () => {
-//     localStorage.removeItem("token");
-//     dispatch(AuthData(true));
-//   };
-
-//   const toggleMobileNav = () => {
-//     setIsMobileNavOpen(!isMobileNavOpen);
-//   };
-
-//   return (
-//     <div className="navbar">
-//       <Box display={{ base: "block", md: "none" }}>
-//         <IconButton
-//           onClick={toggleMobileNav}
-//           className="hamburger-button"
-//           size="sm"
-//           icon={isMobileNavOpen ? <CloseIcon /> : <HamburgerIcon />}
-//         />
-//       </Box>
-//       <Box
-//         display={{ base: isMobileNavOpen ? "block" : "none", md: "block" }}
-//         className="mobile-nav"
-//       >
-//         <Link to={"/"} className="link">
-//           Home
-//         </Link>
-//         <Link to={"/dashboard"} className="link">
-//           Dashboard
-//         </Link>
-//         <Link to={"/create"} className="link">
-//           Create
-//         </Link>
-//         <Link to={"/About"} className="link">
-//           About
-//         </Link>
-//         <Link to={"/register"} className="link">
-//           {isAuth ? (
-//             <Box className="logoutBtn">
-//               <Button onClick={() => handleBtn()}>Logout</Button>
-//               <Avatar
-//                 className="avatar-style"
-//                 name={PersonalData[0].email}
-//                 src=""
-//               />
-//             </Box>
-//           ) : (
-//             "Register"
-//           )}
-//         </Link>
-//       </Box>
-//     </div>
-//   );
-// };

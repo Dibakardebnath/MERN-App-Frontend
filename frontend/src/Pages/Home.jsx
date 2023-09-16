@@ -81,7 +81,7 @@ export const Home=()=>{
          
           <Box className="slider-container" >
       
-          <Image style={{height:"80vh"}} className="slide" src={sliderImages[currentIndex]}  />
+          <Image  className="slide" src={sliderImages[currentIndex]}  />
       
       </Box>
           <Box className="slider-button">
