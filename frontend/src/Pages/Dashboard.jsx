@@ -61,7 +61,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleValue=(val)=>{
       switch(val){
-        case "Health": return setValue("Health")
+        case "Programming": return setValue("Programming")
         case "Food": return setValue("Food")
         case "Art": return setValue("Art")
         case '':return setValue('')
@@ -137,7 +137,7 @@ console.log(nextBtn)
         <FaFilter size={15} ml={'5'} /> {/* Add margin-left for spacing */}
       </Flex>
       </Box>
-            <Button className='btn' value={'Health'} colorScheme='teal' variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Health</Button>
+            <Button className='btn' value={'Programming'} colorScheme='teal' variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Programme</Button>
             <Button colorScheme='teal'value={'Art'} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Art</Button>
             <Button colorScheme='teal'value={'Food'} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Food</Button>
             <Button colorScheme='teal'value={''} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>All</Button>

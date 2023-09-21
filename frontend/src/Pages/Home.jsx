@@ -192,7 +192,7 @@ export const Home=()=>{
             <Heading>Impact of Technology</Heading>
             <Heading  as='h4' size='md' mb={'15px'}>Shaping the Future in a Connected World</Heading>
              <Text>Firstly, technology has enhanced communication, breaking down geographical barriers and enabling instant connectivity through platforms such as social media, video conferencing, and messaging apps. It has facilitated global collaboration, knowledge sharing, and strengthened relationships across borders. Additionally, technology has revolutionized industries, driving automation, streamlining processes, and boosting productivity. It has empowered businesses to reach wider audiences,
-               personalize experiences, and deliver innovative products and services.
+               personalize experiences.
                 </Text>
           </Box>
           <Image className='Images' src='https://elearningindustry.com/wp-content/uploads/2022/11/shutterstock_1798672534.jpg'></Image>
