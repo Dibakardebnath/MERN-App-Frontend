@@ -15,11 +15,11 @@ export const Footer = () => {
 				<p className="footer-links">
 					<a href="#" className="link-1">Home</a>
 					
-					<a href="#">Blog</a>
+					<a href="/dashboard">Blog</a>
 				
-					<a href="#">Create</a>
+					<a href="/create">Create</a>
 				
-					<a href="#">About</a>
+					<a href="/about">About</a>
 					
 					<a href="#">Faq</a>
 					
@@ -31,7 +31,7 @@ export const Footer = () => {
 
 			<div className="footer-center" >
 
-				<div>
+				<div className='contact1'>
 					<i className="fa fa-map-marker"></i>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;
@@ -39,7 +39,7 @@ export const Footer = () => {
 					<p>Contact Information</p>
 				</div>
 
-				<div>
+				<div className='emailPhone'>
 					<i className="fa fa-phone"></i>
 					<p className='contact' style={{ display:"grid",gridTemplateColumns:"1fr", width:"60%",placeItems:"center",marginTop:"-30px",gap:"10px 0px"}}><p>ddibakar@gmail.com </p> <p>+91-87-8745-5034</p> </p>
 					
@@ -61,11 +61,11 @@ export const Footer = () => {
 
 				<div className="footer-icons">
 
-					<a style={{border:"none"}} ><img src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="" /></a>
+					
+					<a href='https://www.linkedin.com/in/dibakar-debnath-39865724a/'><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="" /></a>
+					<a href='https://github.com/Dibakardebnath'><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" /></a>
+{/* href="#" */}<a style={{border:"none"}} ><img src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="" /></a>
 					<a ><img src="https://seeklogo.com/images/T/twitter-icon-circle-black-logo-35827D553B-seeklogo.com.png" alt="" /></a>
-					<a ><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="" /></a>
-					<a ><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" /></a>
-{/* href="#" */}
 				</div>
 
 			</div>

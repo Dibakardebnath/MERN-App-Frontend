@@ -184,7 +184,22 @@ section {
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
-
+    .logo{
+		
+	  margin: auto;
+    }
+	.emailPhone{
+		/* border: 1px solid red; */
+		width: max-content;
+		margin: auto;
+	}
+	.contact1{
+		/* border: 1px solid red; */
+		margin-top: -40px;
+		width: max-content;
+		margin-left: 55px;
+	}
+	
 	.footer-distributed{
 		font: bold 14px sans-serif;
 	}
@@ -202,4 +217,13 @@ section {
 		margin-left: 0;
 	}
 
+}
+@media (min-width: 720px) and (max-width: 1024px){
+
+	.contact1{
+		/* border: 1px solid red; */
+		margin-top: -40px;
+		width: max-content;
+		margin-left: 230px;
+	}
 }

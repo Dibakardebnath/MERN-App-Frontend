@@ -1,0 +1,28 @@
+.mainBox{
+    padding: 5px;
+     width: 35%;
+      margin: 100px auto;
+      border-radius: 10px;
+       border-color: teal;
+}
+
+@media (max-width:720px){
+
+    .mainBox{
+        padding: 5px;
+         width: 80%;
+          margin: 100px auto;
+          border-radius: 10px;
+           border-color: teal;
+    }
+}
+
+    @media (min-width: 721px) and (max-width: 1024px){
+        .mainBox{
+            padding: 5px;
+             width: 60%;
+              margin: 100px auto;
+              border-radius: 10px;
+               border-color: teal;
+        }
+    }

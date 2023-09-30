@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, Stack, Heading } from '@chakra-ui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Register.css'
 
 export const Register = () => {
   const navigate=useNavigate()
@@ -28,7 +29,8 @@ export const Register = () => {
         });
         const token = response.data.token; // Access the token from response.data
         if(token){
-          localStorage.setItem('token', token);
+          localStorage.setItem('token',JSON.stringify(token));
+          localStorage.setItem("user",JSON.stringify("YES"))
           navigate("/dashboard")
         }else{
           console.log("Invalid Login")
@@ -38,7 +40,7 @@ export const Register = () => {
         const response = await axios.post('http://localhost:8000/signup', user, {
           headers: { 'Content-Type': 'application/json' },
         });
-        console.log(response.data); // Log the response data for signup
+        // console.log(response.data);
       }
     } catch (error) {
       alert("invalid login")
@@ -47,7 +49,7 @@ export const Register = () => {
   };
 
   return (
-    <Box p={4} border={'1px solid'} w={'30%'} m={'auto'} borderRadius={'10px'} borderColor={'teal'}>
+    <Box className='mainBox' border={'1px solid'}>
       <Heading as="h1" size="xl" mb={4}>
         {isLogin ? 'Login' : 'Signup'}
       </Heading>

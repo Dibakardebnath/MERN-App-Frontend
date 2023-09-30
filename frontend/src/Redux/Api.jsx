@@ -3,7 +3,8 @@ import {  DeleteData, GetData, UpdateData, personalData } from "./Action"
 
 export const getPublicData=(page)=>async(dispatch)=>{
     try {
-      await axios.get(`http://localhost:8000/?page=${page}&limit=3`)
+      
+      await axios.get(`http://localhost:8000/?page=${page}&limit=4`)
        .then((res)=>{
         dispatch(GetData(res.data))
        
@@ -18,10 +19,10 @@ export const getPublicData=(page)=>async(dispatch)=>{
 export const getPersonalData=(page,value,order)=>async(dispatch)=>{
    try {
      
-    const response= await axios.get(`http://localhost:8000/dashboard?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,{
+    const response= await axios.get(`http://localhost:8000/dashboard?category=${value}&page=${page}&limit=4&sortby=createdAt&order=${order}`,{
       headers:{
          'Content-Type': 'application/json',
-         'Authorization':`Bearer ${localStorage.getItem('token')}`
+         'Authorization':`Bearer ${JSON.parse(localStorage.getItem('token'))}`
       }
     })
     

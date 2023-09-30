@@ -107,8 +107,8 @@ export const Home=()=>{
             <Heading size={'md'}>{title}</Heading>
 
             <Text fontSize='md' mt={'10px'}>
-  {description.slice(0, 40)} {description.length > 40 ? '...' : ''}
-  {description.length > 40 && (
+  {description.slice(0, 30)} {description.length > 30 ? '...' : ''}
+  {description.length > 30 && (
     <a href={`/dashboard/${_id}`} style={{ color: 'orange', marginLeft: '5px' }}>
       read more
     </a>
@@ -141,7 +141,7 @@ export const Home=()=>{
 
           </Box>
          
-        <Flex className='firstCard'>
+        <Box  className='firstCard'>
           <Image className='Images' src='https://www.shutterstock.com/shutterstock/photos/605950769/display_1500/stock-photo-blog-website-article-lifestyle-online-word-605950769.jpg'></Image>
           <Box className='firstCardbody'>
             <Heading>Living Life to the Fullest</Heading>
@@ -156,10 +156,10 @@ export const Home=()=>{
                 development.
                 </Text>
           </Box>
-        </Flex>
+        </Box>
 
 
-          <Flex className='secCard'>
+          <Box  className='secCard'>
           <Box className='secCardbody'>
             <Heading>Influencer Marketing</Heading>
             <Heading  as='h4' size='md'  mb={'15px'}>Harnessing the Power of Influencers for Brand Growth</Heading>
@@ -174,9 +174,9 @@ export const Home=()=>{
           </Box>
           <Image className='Images' src='https://grin.co/wp-content/uploads/2020/08/IM_SA_Influencers_for_Every_Stage_of_the_Influencer_Marketing_Funnel_2022-Q3-07_FINAL_BLGI_960x640_01-1.webp'></Image>
          
-        </Flex>
+        </Box>
 
-          <Flex className='firstCard'>
+          <Box  className='firstCard'>
           <Image className='Images' src='https://ychef.files.bbci.co.uk/976x549/p01rpz8r.jpg'></Image>
           <Box className='firstCardbody'>
             <Heading>Mount Everest</Heading>
@@ -185,9 +185,9 @@ export const Home=()=>{
                allowing travelers to immerse themselves in the soothing embrace of nature
                 </Text>
           </Box>
-        </Flex>
+        </Box>
 
-          <Flex className='secCard'>
+          <Box className='secCard'>
           <Box className='secCardbody'>
             <Heading>Impact of Technology</Heading>
             <Heading  as='h4' size='md' mb={'15px'}>Shaping the Future in a Connected World</Heading>
@@ -197,9 +197,9 @@ export const Home=()=>{
           </Box>
           <Image className='Images' src='https://elearningindustry.com/wp-content/uploads/2022/11/shutterstock_1798672534.jpg'></Image>
          
-        </Flex>
+        </Box>
 
-          <Flex className='firstCard'>
+          <Box className='firstCard'>
           <Image className='Images' src='https://calvin.edu/dotAsset/137e6845-ec8a-4c58-b097-06af44554088.jpg'></Image>
           <Box className='firstCardbody'>
             <Heading>Importance of Study</Heading>
@@ -208,7 +208,7 @@ export const Home=()=>{
                make informed decisions, and tackle challenges effectively.
                 </Text>
           </Box>
-        </Flex>
+        </Box>
 
 
         <Footer/>

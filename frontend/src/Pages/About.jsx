@@ -22,18 +22,11 @@ export const About=()=>{
       ];
     return (
         <Box>
-            <Heading>About Us</Heading>
+            <Heading className="heading">About Us</Heading>
             <Text className="welcome-heading">Welcome to our blog! We are passionate 
                 about sharing insightful content with our readers.</Text>
 
                 <Box className='image-gallery'>
-            {/* <ImageGallery items={images} 
-            showFullscreenButton={false}
-            showPlayButton={true}
-            slideInterval={2000}
-            slideOnThumbnailOver={true}
-            showBullets={true}
-            /> */}
             <Image className="sliderGif" src="https://i.makeagif.com/media/2-07-2017/JTG6s-.gif"></Image>
             </Box>
             <Heading mt={'20px'}>Our Mission</Heading>

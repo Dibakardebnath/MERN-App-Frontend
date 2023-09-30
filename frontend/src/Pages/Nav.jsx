@@ -33,7 +33,7 @@ export const Nav=()=>{
         
       <NavLink to={'/register'} className="title">{isAuth?
        <Box className="logoutBtn">
-     <Button onClick={()=>handlBtn()}>Logout</Button>
+     <Button className="logout" onClick={()=>handlBtn()}>Logout</Button>
       <Avatar  size='sm' className="avatar-style" name={PersonalData[0].email} src="" />
 
        </Box>

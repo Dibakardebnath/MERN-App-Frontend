@@ -1,3 +1,25 @@
+
+.myBlog{
+  margin-top: 50px;
+  -webkit-text-stroke: 3px #104721;
+  color: transparent;
+}
+.filterBlog1{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 100px;
+  border-radius: 5px;
+ 
+}
+.filterBlog2{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 100px;
+  border-radius: 5px;
+ 
+}
 .funBlog{
  
  padding: 10px 80px;
@@ -7,7 +29,10 @@
     display: flex;
     gap: 5px;
 }
-
+.allFunBtn1{
+  display: flex;
+  gap: 5px;
+}
 .funBlog2{
     display: flex;
     gap: 5px;
@@ -22,7 +47,6 @@
 
 .my-data{
     margin-top: 40px;
-    /* border: 1px solid; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,24 +62,14 @@
 
 
   .my-blog{
-   
-    border: 1px solid black;
+  
+    /* border: 1px solid rgb(194, 8, 8); */
      width: 25%;
      height: 31vh;
     
   }
 
 
-
-  .image-gallery{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    /* height: 300px; */
-    /* border: 1px solid red; */
-    width: 80%;
-    margin: auto;
-    /* height: 200px; */
-  }
  
   .modal{
     border: 1px solid;
@@ -85,11 +99,220 @@
 }
 
 .editBlog{
-  /* border: 1px solid; */
+ 
   width: max-content;
   margin: auto;
 }
-.myBlog{
-  -webkit-text-stroke: 3px #104721;
-  color: transparent;
+
+
+/* media queries for mobile */
+@media (max-width:720px){
+  .myBlog{
+    margin-top: 85px;
+    margin-bottom: -80px;
+    -webkit-text-stroke: 3px #104721;
+    color: transparent;
+  }
+  .funBlog{
+   
+    margin-top: 100px;
+      
+     }
+  .funBlog1{
+   
+    display: flex;
+    flex-direction: column;
+  
 }
+.filterBlog1{
+ 
+  width: 100px;
+  height: 5vh;
+  margin-left: -70px;
+}
+.allFunBtn1{
+ 
+  margin-top: 5px;
+  display: flex;
+  margin-left: -70px;
+  gap: 5px;
+}
+.filterBlog2{
+ 
+  width: 100px;
+  height: 5vh;
+  margin-left: -70px;
+}
+.allFunBtn2{
+ 
+  margin-top: 5px;
+  display: flex;
+  margin-left: -70px;
+  gap: 5px;
+}
+.funBlog2{
+  margin-left: 120px;
+  width: 50px;
+ 
+  display: flex;
+  flex-direction: column;
+
+}
+.allFunBtn1 Button {
+  padding: 2px;
+  height: 4vh;
+ font-size: 10px;
+}
+.allFunBtn2 Button {
+  padding: 2px;
+  height: 4vh;
+ font-size: 10px;
+}
+
+
+
+   .my-data{
+    /* border: 1px solid; */
+    width: 96%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 5px;
+    padding: 20px 0px 20px 0px;
+  }
+  .my-blog{
+    margin: auto;
+    width: 90%;
+    /* height: 24vh; */
+  
+  
+  }
+  .icons{
+    /* border: 1px solid; */
+    margin-bottom: 60px;
+  }
+  .image-gallery{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    margin: auto;
+   overflow: auto;
+  }
+.TitleGap{
+  /* border: 1px solid; */
+  display: flex;
+  gap: 10px;
+}
+.modalbtn{
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-top: 10px;
+}
+.modalbtn Button{
+  /* width: 25px; */
+  height: 4vh;
+}
+
+
+}
+
+  @media (min-width: 721px) and (max-width: 1024px){
+
+    .myBlog{
+      margin-bottom: -80px;
+      -webkit-text-stroke: 3px #104721;
+      color: transparent;
+    }
+    .funBlog{
+      /* border: 1px solid; */
+      margin-top:100px;
+      padding: 10px 30px 10px 100px;
+        
+       }
+    .funBlog1{
+  
+      display: flex;
+      flex-direction: column;
+    
+  }
+  .filterBlog1{
+    width: 100px;
+    height: 5vh;
+    margin-left: -70px;
+  }
+  .allFunBtn1{
+ 
+   
+    margin-top: 5px;
+    display: flex;
+    margin-left: -70px;
+    gap: 13px;
+  }
+  .filterBlog2{
+    width: 100px;
+    height: 5vh;
+    margin-left: -70px;
+  }
+  .allFunBtn2{
+   
+    margin-top: 5px;
+    display: flex;
+    margin-left: -70px;
+    gap: 13px;
+  }
+  .funBlog2{
+    margin-left: 120px;
+    width: 50px;
+   
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .allFunBtn1 Button {
+   
+   
+    padding: 2px;
+    height: 4vh;
+   font-size: 10px;
+  }
+  .allFunBtn2 Button {
+    padding: 2px;
+    height: 4vh;
+   font-size: 10px;
+  }
+  
+  
+  
+     .my-data{
+      /* border: 1px solid; */
+      width: 96%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 15px 0px 15px 80px;
+    }
+    .my-blog{
+      width: 80%;
+      height: 24vh;
+    
+    
+    }
+    .icons{
+      /* border: 1px solid; */
+      margin-bottom: 20px;
+    }
+    .image-gallery{
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 80%;
+      margin: auto;
+     overflow: auto;
+    }
+  .TitleGap{
+    /* border: 1px solid; */
+    display: flex;
+    gap: 10px;
+  }
+
+  }

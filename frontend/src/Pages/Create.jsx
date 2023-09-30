@@ -44,8 +44,8 @@ export const Create=()=>{
   }
   return (
     <Box>
-<Box borderRadius={'10px'} border={'1px solid'} w={'50%'} m={'100px auto'} padding={'40px'}>
-      <form onSubmit={handlSub}>
+<Box className="FormBox" border={'1px solid'}>
+      <form  onSubmit={handlSub}>
         <Stack spacing={3}>
           <FormControl id="title" isRequired>
             <FormLabel>Title</FormLabel>

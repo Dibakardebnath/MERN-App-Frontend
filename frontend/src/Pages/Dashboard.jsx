@@ -8,6 +8,7 @@ import { BiLike, BiChat, BiShare } from 'react-icons/bi';
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+// import "~react-image-gallery/styles/scss/image-gallery.scss";
 import { Footer } from './Footer';
 import Modal from 'react-modal';
 
@@ -38,24 +39,22 @@ const [isModalOpen, setIsModalOpen] = useState(false);
   };
 
   
- 
 
-    
     const [value,setValue]=useState('')
     const [order,setOrder]=useState('')
    const [pageNo,setPageNo]=useState(1)
     const images = [
       {
         original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
+        // thumbnail: "https://picsum.photos/id/1018/250/150/",
       },
       {
         original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
+        // thumbnail: "https://picsum.photos/id/1015/250/150/",
       },
       {
         original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
+        // thumbnail: "https://picsum.photos/id/1019/250/150/",
       },
     ];
 
@@ -113,7 +112,7 @@ console.log(nextBtn)
   contentLabel="Edit Modal"
 >
   {/* Your modal content goes here */}
-  <Box >
+  <Box className='modal-edit'>
     <Heading className='editBlog'>Edit Blog</Heading>
     <FormControl>
       <Input type="text" placeholder='title' name='title' value={updateVal.title} onChange={(e)=>setUpdateVal({...updateVal,[e.target.name]:e.target.value})}/>
@@ -132,28 +131,34 @@ console.log(nextBtn)
         <Heading className='myBlog'>My Blogs</Heading>
  <Flex className='funBlog'>
         <Box className='funBlog1'>
-            <Box bg='white' w='50%' h='6.5vh' borderRadius={'5px'} p={2.5} color='black'><Flex alignItems="center">
-        <span>Filter by</span>
-        <FaFilter size={15} ml={'5'} /> {/* Add margin-left for spacing */}
+            <Box className='filterBlog1' ><Flex alignItems="center">
+        <span marginRight="5px">Filter by</span>
+        <FaFilter  size={15} style={{ marginLeft: '10px' }} />
       </Flex>
       </Box>
-            <Button className='btn' value={'Programming'} colorScheme='teal' variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Programme</Button>
+      <Box className='allFunBtn1'>
+           <Button className='btn' value={'Programming'} colorScheme='teal' variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Programme</Button>
             <Button colorScheme='teal'value={'Art'} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Art</Button>
             <Button colorScheme='teal'value={'Food'} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>Food</Button>
             <Button colorScheme='teal'value={''} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>All</Button>
 
+      </Box>
+            
          </Box>
          <Spacer />
          <Box className='funBlog2'>
-          <Box bg='white' w='50%' h='6.5vh' borderRadius={'5px'} p={2.5} color='black'>
+          <Box className='filterBlog2'>
           <Flex alignItems="center">
         <span>Sort by</span>
-        <FaSort size={20} ml={5} /> {/* Adjust the icon and margin-left as needed */}
+        <FaSort size={20} style={{ marginLeft: '10px' }} /> {/* Adjust the icon and margin-left as needed */}
       </Flex>
           </Box>
+          <Box className='allFunBtn2'>
           <Button colorScheme='teal' value={'desc'} variant='outline' color={'white'} onClick={(e)=>handleOrder(e.target.value)}>latest</Button>
           <Button colorScheme='teal' value={'asc'} variant='outline' color={'white'} onClick={(e)=>handleOrder(e.target.value)}>old</Button>
 
+          </Box>
+         
          </Box>
  </Flex>
  <Box className='my-data'>
@@ -161,7 +166,7 @@ console.log(nextBtn)
           <Card key={_id} className="my-blog">
             <CardBody >
 
-                <Flex padding={'0px 20px'}>
+                <Flex className='TitleGap' padding={'0px 20px'}>
                 <Heading size={'sm'}>{title}</Heading>
                 <Spacer />
              <Menu>
@@ -198,7 +203,7 @@ console.log(nextBtn)
        
 
             </CardBody>
-            <Flex>
+            <Flex className='icons'>
          <Button flex='1' variant='ghost' leftIcon={<BiLike />}></Button>
          <Button flex='1' variant='ghost' leftIcon={<BiChat />}>  </Button>
          <Button flex='1' variant='ghost' leftIcon={<BiShare />}>  </Button>
@@ -220,16 +225,16 @@ console.log(nextBtn)
           <Heading mt={'40px'}>Capture World in Your Own Word's</Heading>
           <Text fontSize='md' w={'94%'}  m={'20px auto'} >From wanderlust-filled travel tales to tantalizing food adventures and insightful personal growth insights, our blog is a diverse tapestry of 
             captivating stories that will inspire, nourish, and ignite your curiosity.</Text>
-            <Box className='image-gallery'>
-            <ImageGallery className={"image-g"} items={images} 
+            {/* <Box className='image-gallery'> */}
+            <ImageGallery items={images} 
             showFullscreenButton={false}
             showPlayButton={true}
             slideInterval={2000}
-            slideOnThumbnailOver={true}
+            slideOnThumbnailOver={false}
             showBullets={true}
             />
             
-            </Box>
+            {/* </Box> */}
             <Footer/>
       </Box>
     )
