@@ -21,13 +21,14 @@
  
 }
 .funBlog{
- 
- padding: 10px 80px;
+ border: 1px solid;
+ /* padding: 10px 80px; */
 }
 
 .funBlog1{
     display: flex;
     gap: 5px;
+    border: 1px solid;
 }
 .allFunBtn1{
   display: flex;
@@ -46,8 +47,12 @@
 
 
 .my-data{
-    margin-top: 40px;
-    display: flex;
+    margin: 30px auto;
+    border:1px solid;
+    width:90%;
+    gap:20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     justify-content: space-around;
     align-items: center;
   }
@@ -63,9 +68,9 @@
 
   .my-blog{
   
-    /* border: 1px solid rgb(194, 8, 8); */
-     width: 25%;
-     height: 31vh;
+    border: 1px solid rgb(194, 8, 8);
+     /* width: 25%; */
+     height: max-content;
     
   }
 
@@ -106,7 +111,7 @@
 
 
 /* media queries for mobile */
-@media (max-width:720px){
+@media (max-width:767px){
   .myBlog{
     margin-top: 85px;
     margin-bottom: -80px;
@@ -114,7 +119,7 @@
     color: transparent;
   }
   .funBlog{
-   
+   border: 1px solid;
     margin-top: 100px;
       
      }
@@ -172,17 +177,17 @@
 
 
    .my-data{
-    width: 96%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    gap: 5px;
-    padding: 20px 0px 20px 0px;
+  /* display:grid; */
+    grid-template-columns: repeat(1,1fr);
+
   }
   .my-blog{
-    margin: auto;
-    width: 90%;
   
+    border: 1px solid rgb(194, 8, 8);
+    /* width: 100%; */
+    height: max-content;
+    margin:auto;
+    
   }
   .icons{
     margin-bottom: 60px;
@@ -276,15 +281,15 @@
   
      .my-data{
       /* border: 1px solid; */
-      width: 96%;
-      margin: 20px auto;
+      width: 100%;
+      margin: auto;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
       padding: 15px 0px 15px 80px;
     }
     .my-blog{
-      width: 80%;
+      width: 100%;
       height: 24vh;
     
     

@@ -143,14 +143,14 @@ console.log(nextBtn)
             <Button colorScheme='teal'value={''} variant='outline' color={'white'} onClick={(e)=>handleValue(e.target.value)}>All</Button>
 
       </Box>
-            
+
          </Box>
          <Spacer />
          <Box className='funBlog2'>
           <Box className='filterBlog2'>
           <Flex alignItems="center">
         <span>Sort by</span>
-        <FaSort size={20} style={{ marginLeft: '10px' }} /> {/* Adjust the icon and margin-left as needed */}
+        <FaSort size={20} style={{ marginLeft: '10px' }}/>
       </Flex>
           </Box>
           <Box className='allFunBtn2'>
@@ -161,65 +161,69 @@ console.log(nextBtn)
          
          </Box>
  </Flex>
- <Box className='my-data'>
-          {Array.isArray(PersonalData) && PersonalData.map(({title,description,_id,createdAt})=>
-          <Card key={_id} className="my-blog">
-            <CardBody >
+ {PersonalData.length===0?(
+ <Heading>Please add your data!</Heading>
+ ):(
+  <Box className='my-data'>
+  {Array.isArray(PersonalData) && PersonalData.map(({title,description,_id,createdAt})=>
+  <Card key={_id} className="my-blog">
+    <CardBody >
 
-                <Flex className='TitleGap' padding={'0px 20px'}>
-                <Heading size={'sm'}>{title}</Heading>
-                <Spacer />
-             <Menu>
-                   <MenuButton as={Box} cursor="pointer">
-                    <Icon as={HamburgerIcon} boxSize={6} />
-                      </MenuButton>
-                   <MenuList>
-                   <MenuItem onClick={() => {
-                    openModal();         
-                    handleUpdate(_id); 
+        <Flex className='TitleGap' padding={'0px 20px'}>
+        <Heading size={'sm'}>{title}</Heading>
+        <Spacer />
+     <Menu>
+           <MenuButton as={Box} cursor="pointer">
+            <Icon as={HamburgerIcon} boxSize={6} />
+              </MenuButton>
+           <MenuList>
+           <MenuItem onClick={() => {
+            openModal();         
+            handleUpdate(_id); 
 
-                    }}>Edit</MenuItem>
+            }}>Edit</MenuItem>
 
-                      <MenuItem onClick={() => handleDel(_id)}>Delete</MenuItem>
+              <MenuItem onClick={() => handleDel(_id)}>Delete</MenuItem>
 
-                    </MenuList>
-             </Menu>
-                </Flex>
+            </MenuList>
+     </Menu>
+        </Flex>
 
-            <Box  mt={'15px'}>
-            <Text fontSize='sm'>
-                 {description.slice(0, 25)} {description.length > 25 ? '...' : ''}
-                  {description.length > 25 && (
-                   <a href={`/dashboard/${_id}`} style={{ color: 'orange', marginLeft: '5px' }}>
-      read more
-    </a>
-  )}
+    <Box  mt={'15px'}>
+    <Text fontSize='sm'>
+         {description.slice(0, 25)} {description.length > 25 ? '...' : ''}
+          {description.length > 25 && (
+           <a href={`/dashboard/${_id}`} style={{ color: 'orange', marginLeft: '5px' }}>
+read more
+</a>
+)}
 </Text>
-            </Box>
-          
-          <Box>
-          <Text fontSize='sm' mt={'20px'}>posted: {Math.floor((new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24))} days ago</Text>
-          </Box>
-       
+    </Box>
+  
+  <Box>
+  <Text fontSize='sm' mt={'20px'}>posted: {Math.floor((new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24))} days ago</Text>
+  </Box>
+    </CardBody>
 
-            </CardBody>
-            <Flex className='icons'>
-         <Button flex='1' variant='ghost' leftIcon={<BiLike />}></Button>
-         <Button flex='1' variant='ghost' leftIcon={<BiChat />}>  </Button>
-         <Button flex='1' variant='ghost' leftIcon={<BiShare />}>  </Button>
-      </Flex>
- 
-          </Card>
-          )}
-           
-          </Box>
+  <Flex className='icons'>
+ <Button flex='1' variant='ghost' leftIcon={<BiLike />}></Button>
+ <Button flex='1' variant='ghost' leftIcon={<BiChat />}></Button>
+ <Button flex='1' variant='ghost' leftIcon={<BiShare />}></Button>
+</Flex>
+
+  </Card>
+  )}
+   
+  </Box>
+ )}
+
           <Box className='pagination'>
           <Button isDisabled={pageNo===1} colorScheme='teal' variant='solid'  onClick={()=>handlePage(-1)}>prev</Button>
           <Flex borderRadius='md' bg='white' color='black' px={5} h={10} justify="center" align="center" >
           {pageNo}
           </Flex>
 
-          <Button isDisabled={pageNo===nextBtn} colorScheme='teal' variant='solid'  onClick={()=>handlePage(1)}>next</Button>
+          <Button isDisabled={pageNo===nextBtn || PersonalData.length===0} colorScheme='teal' variant='solid'  onClick={()=>handlePage(1)}>next</Button>
 
           </Box>
           <Heading mt={'40px'}>Capture World in Your Own Word's</Heading>
