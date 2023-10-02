@@ -3,17 +3,21 @@ import './Nav.css'
 import { useDispatch, useSelector } from "react-redux"
 import { Avatar, Box, Button  } from "@chakra-ui/react"
 import { AuthData } from "../Redux/Action"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 export const Nav=()=>{
     const {isAuth,PersonalData}=useSelector((store)=>store)
     const [menuOpen, setMenuOpen]=useState(false)
-    console.log(menuOpen)
+    // console.log(menuOpen)
+      
+    const mail=JSON.parse(localStorage.getItem("email"))
+
+    console.log(mail)
+
     const dispath=useDispatch()
     const handlBtn=()=>{
         
       localStorage.removeItem('token');
-      dispath(AuthData(true))
-
+      dispath(AuthData(false))
     }
 
     // console.log(isAuth)
@@ -27,14 +31,15 @@ export const Nav=()=>{
 
       <div className="menu" onClick={()=>setMenuOpen(!menuOpen)}>
         <span></span>
+
         <span></span>
         <span></span>
         </div>
         
-      <NavLink to={'/register'} className="title">{isAuth?
-       <Box className="logoutBtn">
-     <Button className="logout" onClick={()=>handlBtn()}>Logout</Button>
-      <Avatar  size='sm' className="avatar-style" name={PersonalData[0].email} src="" />
+      <NavLink  to={'/register'} className="title">{isAuth?
+       <Box  className="logoutBtn">
+     <Button className="logout" onClick={()=>handlBtn()} colorScheme="#1dd88a">Logout</Button>
+      <Avatar  size='sm' className="avatar-style" name={mail} src=""/>
 
        </Box>
        :"Register"}</NavLink>

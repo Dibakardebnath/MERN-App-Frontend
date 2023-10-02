@@ -1,6 +1,6 @@
 
 .myBlog{
-  margin-top: 50px;
+  margin-top: 70px;
   -webkit-text-stroke: 3px #104721;
   color: transparent;
 }
@@ -172,7 +172,6 @@
 
 
    .my-data{
-    /* border: 1px solid; */
     width: 96%;
     margin: auto;
     display: grid;
@@ -183,12 +182,9 @@
   .my-blog{
     margin: auto;
     width: 90%;
-    /* height: 24vh; */
-  
   
   }
   .icons{
-    /* border: 1px solid; */
     margin-bottom: 60px;
   }
   .image-gallery{
@@ -199,17 +195,14 @@
    overflow: auto;
   }
 .TitleGap{
-  /* border: 1px solid; */
   display: flex;
   gap: 10px;
 }
 .modalbtn{
-  /* border: 1px solid red; */
   width: 100%;
   margin-top: 10px;
 }
 .modalbtn Button{
-  /* width: 25px; */
   height: 4vh;
 }
 
@@ -219,15 +212,13 @@
   @media (min-width: 721px) and (max-width: 1024px){
 
     .myBlog{
-      margin-bottom: -80px;
+      margin-top: 80px;
       -webkit-text-stroke: 3px #104721;
       color: transparent;
     }
     .funBlog{
-      /* border: 1px solid; */
-      margin-top:100px;
+      margin-top:10px;
       padding: 10px 30px 10px 100px;
-        
        }
     .funBlog1{
   

@@ -65,7 +65,7 @@ export const Home=()=>{
       };
     // ...........................end........................
 
-      console.log(Data)
+      // console.log(Data)
       useEffect(()=>{
 
         dispatch(getPublicData(page))
@@ -101,7 +101,7 @@ export const Home=()=>{
           <Box className='blog-category' >Public Blog</Box>
           <Box className='public-data'>
           {Data && Data.map(({title,description,_id,createdAt})=>
-          <Card key={_id} className="blog">
+          <Card key={_id} className="blog" >
             <CardBody className='smallDiv'>
 
             <Heading size={'md'}>{title}</Heading>

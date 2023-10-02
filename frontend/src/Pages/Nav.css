@@ -3,6 +3,7 @@
 }
 nav {
   border: 1px solid;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +19,7 @@ nav .title{
   /* border: 1px solid white; */
   display: block;
   position: absolute;
-  top: 0.1rem;
+  /* top: 0.1rem; */
   right: 0.8rem;
   text-decoration: none;
   color: white;
@@ -68,12 +69,14 @@ nav ul li a:not(.active):hover{
 }
 
 .logoutBtn{
+ 
   margin: -10px auto;
   gap: 5px;
   display: flex;
   align-items: center;
 }
 .logout{
+  border: 1px solid;
   width: 70px;
 }
 
@@ -90,7 +93,7 @@ nav ul li a:not(.active):hover{
    align-items: start;
   border: 1px solid rgb(248, 244, 238);
   /* width: 80%; */
-  height: 8vh;
+  height: 10vh;
   background-color: teal;
   position: fixed; 
   top: 0;
@@ -99,7 +102,10 @@ nav ul li a:not(.active):hover{
    z-index: 5000;
   }
 
- 
+ nav .title{
+  font-size: medium;
+  
+ }
   nav ul{
     display: none;
 
