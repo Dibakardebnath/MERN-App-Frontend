@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  width: 100px;
   border-radius: 5px;
  
 }
@@ -16,41 +15,49 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  width: 100px;
+ 
   border-radius: 5px;
  
 }
 .funBlog{
- border: 1px solid;
- /* padding: 10px 80px; */
+ width: 90%;
+ margin: auto;
 }
 
 .funBlog1{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 36%;
     gap: 5px;
-    border: 1px solid;
+    
 }
 .allFunBtn1{
+  
+  display: flex;
+  gap: 5px;
+}
+.allFunBtn2{
   display: flex;
   gap: 5px;
 }
 .funBlog2{
-    display: flex;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 22%;
+  gap: 5px;
+  /* border: 1px solid; */
 }
 .btn:hover{
     border: white;
     background-color: teal;
-    
     
 }
 
 
 .my-data{
     margin: 30px auto;
-    border:1px solid;
     width:90%;
-    gap:20px;
+    gap:60px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-content: space-around;
@@ -65,35 +72,23 @@
     align-items: center;
   }
 
-
   .my-blog{
-  
-    border: 1px solid rgb(194, 8, 8);
-     /* width: 25%; */
      height: max-content;
-    
   }
 
-
- 
   .modal{
-    border: 1px solid;
+    /* border: 10px solid; */
     background-color: teal;
     color: wheat;
     margin: 200px auto;
-     width:50%;
+     width:90%;
      padding: 40px;
      border-radius: 10px;
   }
   .modalbtn{
-    /* border: 1px solid; */
-    padding: 50px auto ;
-    width: 200px;
+    margin-top: 8px;
     gap: 8px;
-    margin: 5px auto;
     justify-content: center;
-    align-items: center;
-    /* margin: 100px auto; */
   }
 .modal input::placeholder{
   color: wheat;
@@ -119,49 +114,38 @@
     color: transparent;
   }
   .funBlog{
-   border: 1px solid;
-    margin-top: 100px;
-      
+   /* border: 1px solid rgb(190, 113, 11); */
+    margin: 100px auto;
+     align-items: top;
      }
   .funBlog1{
-   
-    display: flex;
-    flex-direction: column;
-  
-}
-.filterBlog1{
  
-  width: 100px;
-  height: 5vh;
-  margin-left: -70px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: auto;
+    width: max-content;
+    
 }
+
 .allFunBtn1{
  
-  margin-top: 5px;
-  display: flex;
-  margin-left: -70px;
-  gap: 5px;
-}
-.filterBlog2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
  
-  width: 100px;
-  height: 5vh;
-  margin-left: -70px;
 }
+
 .allFunBtn2{
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
  
-  margin-top: 5px;
-  display: flex;
-  margin-left: -70px;
-  gap: 5px;
 }
 .funBlog2{
-  margin-left: 120px;
-  width: 50px;
- 
-  display: flex;
-  flex-direction: column;
-
+  /* border: 1px solid; */
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  margin: 0px auto;
+  width: max-content;
 }
 .allFunBtn1 Button {
   padding: 2px;
@@ -177,21 +161,16 @@
 
 
    .my-data{
-  /* display:grid; */
+  margin: -60px auto 20px auto;
     grid-template-columns: repeat(1,1fr);
 
   }
   .my-blog{
-  
-    border: 1px solid rgb(194, 8, 8);
-    /* width: 100%; */
     height: max-content;
     margin:auto;
     
   }
-  .icons{
-    margin-bottom: 60px;
-  }
+
   .image-gallery{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -204,12 +183,11 @@
   gap: 10px;
 }
 .modalbtn{
+  /* border: 1px solid; */
   width: 100%;
   margin-top: 10px;
 }
-.modalbtn Button{
-  height: 4vh;
-}
+
 
 
 }
@@ -280,13 +258,12 @@
   
   
      .my-data{
-      /* border: 1px solid; */
-      width: 100%;
-      margin: auto;
+      width: 90%;
+      margin: 20px auto;
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      padding: 15px 0px 15px 80px;
+    
     }
     .my-blog{
       width: 100%;

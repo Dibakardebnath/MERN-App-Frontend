@@ -130,7 +130,7 @@ console.log(nextBtn)
 </Modal>
         <Heading className='myBlog'>My Blogs</Heading>
  <Flex className='funBlog'>
-        <Box className='funBlog1'>
+   <Box className='funBlog1'>
             <Box className='filterBlog1' ><Flex alignItems="center">
         <span marginRight="5px">Filter by</span>
         <FaFilter  size={15} style={{ marginLeft: '10px' }} />
@@ -148,7 +148,7 @@ console.log(nextBtn)
          <Spacer />
          <Box className='funBlog2'>
           <Box className='filterBlog2'>
-          <Flex alignItems="center">
+          <Flex alignItems={'center'}>
         <span>Sort by</span>
         <FaSort size={20} style={{ marginLeft: '10px' }}/>
       </Flex>

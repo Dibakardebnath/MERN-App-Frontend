@@ -197,7 +197,7 @@ section {
 		/* border: 1px solid red; */
 		margin-top: -40px;
 		width: max-content;
-		margin-left: 55px;
+		margin-left: 50x;
 	}
 	
 	.footer-distributed{
@@ -218,10 +218,9 @@ section {
 	}
 
 }
-@media (min-width: 720px) and (max-width: 1024px){
+@media (min-width: 767px) and (max-width: 1024px){
 
 	.contact1{
-		/* border: 1px solid red; */
 		margin-top: -40px;
 		width: max-content;
 		margin-left: 230px;
