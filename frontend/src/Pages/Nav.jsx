@@ -9,14 +9,14 @@ export const Nav=()=>{
     const [menuOpen, setMenuOpen]=useState(false)
     // console.log(menuOpen)
       
-    const mail=JSON.parse(localStorage.getItem("email"))
+    const mail=JSON.parse(sessionStorage.getItem("email"))
 
     console.log(mail)
 
     const dispath=useDispatch()
     const handlBtn=()=>{
         
-      localStorage.removeItem('token');
+      sessionStorage.removeItem('token');
       dispath(AuthData(false))
     }
 

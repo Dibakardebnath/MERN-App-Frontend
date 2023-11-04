@@ -9,14 +9,14 @@ import { useSelector } from 'react-redux'
 
 
 export const AllRoute=()=>{
-   const token=JSON.parse(localStorage.getItem("token"))
+   const token=JSON.parse(sessionStorage.getItem("token"))
    const {login}=useSelector((store)=>store)
    console.log(login)
     return (
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/dashboard' element={login?<Dashboard/>:<Navigate to={'/register'} />}/>
-            <Route path='/create' element={login?<Create/>:<Navigate to={'/register'} />}/>
+            <Route path='/dashboard' element={login||token?<Dashboard/>:<Navigate to={'/register'} />}/>
+            <Route path='/create' element={login||token?<Create/>:<Navigate to={'/register'} />}/>
             <Route path='/About' element={<About/>}/>
             <Route path='/register' element={<Register/>}/>
            

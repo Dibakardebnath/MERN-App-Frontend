@@ -39,8 +39,7 @@ export const Home=()=>{
 
       }
 
-    
-
+  
       
       useEffect(() => {
       

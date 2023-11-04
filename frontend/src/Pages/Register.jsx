@@ -34,8 +34,8 @@ export const Register = () => {
         });
         const token = response.data.token; // Access the token from response.data
         if(token){
-          localStorage.setItem('token',JSON.stringify(token));
-          localStorage.setItem('email',JSON.stringify(user.email));
+          sessionStorage.setItem('token',JSON.stringify(token));
+          sessionStorage.setItem('email',JSON.stringify(user.email));
           dispatch(LOGIN(true))
           dispatch(AuthData(true))
           navigate("/")

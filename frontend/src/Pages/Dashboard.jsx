@@ -1,4 +1,4 @@
-import { Box, Button, Text, Link, Heading, Card, Flex, CardBody, Spacer, Menu, MenuButton, MenuList, MenuItem, Icon, Input, FormControl } from '@chakra-ui/react';
+import { Box, Button, Text, Link, Heading, Card, Flex, CardBody, Spacer, Menu, MenuButton, MenuList, MenuItem, Icon, Input, FormControl, Image } from '@chakra-ui/react';
 import './Dashboard.css'
 import { FaFilter,  FaSort } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
@@ -162,7 +162,7 @@ console.log(nextBtn)
          </Box>
  </Flex>
  {PersonalData.length===0?(
- <Heading>Please add your data!</Heading>
+ <Image margin={'auto'} src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif"></Image>
  ):(
   <Box className='my-data'>
   {Array.isArray(PersonalData) && PersonalData.map(({title,description,_id,createdAt})=>
