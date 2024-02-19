@@ -10,7 +10,7 @@ import { AuthData, LOGIN } from '../Redux/Action';
 export const Register = () => {
  const dispatch=useDispatch()
  const {login}=useSelector((store)=>store)
- console.log(login)
+
   const navigate=useNavigate()
   const [isLogin, setIsLogin] = useState(true);
   const [user, setUser] = useState({

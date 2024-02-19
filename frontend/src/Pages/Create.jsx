@@ -13,7 +13,7 @@ export const Create=()=>{
   const handlSub=async(e)=>{
       e.preventDefault();
     try {
-      const response=await axios.post("http://localhost:8000/create",newuser,{
+      const response=await axios.post("https://lazy-jade-barracuda-tux.cyclic.cloud/create",newuser,{
         headers: {
           'Content-Type': 'application/json',
           'Authorization':`Bearer ${localStorage.getItem('token')}`
