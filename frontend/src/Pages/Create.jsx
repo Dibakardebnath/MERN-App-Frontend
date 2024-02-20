@@ -10,38 +10,28 @@ export const Create=()=>{
     category:"",
     description:""
   })
-  const handlSub=async(e)=>{
-      e.preventDefault();
+  const handlSub = async (e) => {
+    e.preventDefault();
     try {
-      const response=await axios.post("https://lazy-jade-barracuda-tux.cyclic.cloud/create",newuser,{
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization':`Bearer ${localStorage.getItem('token')}`
-        },
-        body: JSON.stringify(newuser)
-        
-      })
-      if (!response.ok) {
-        throw new Error("Failed to create the blog");
-      }
-     const newBlog=await response.json();
-     
-      //clear the form
-      setNewUser({
-        title:"",
-        category:"",
-        description:""
-      })
+        const response = await axios.post("https://lazy-jade-barracuda-tux.cyclic.cloud/create", newuser, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+            }
+        });
+        if (response.status !== 200) {
+            throw new Error("Failed to create the blog");
+        }
+        // Clear the form
+        setNewUser({
+            title: "",
+            category: "",
+            description: ""
+        });
     } catch (error) {
-      console.log("Error creating blog",error)
+        console.log("Error creating blog", error);
     }
-      setNewUser({
-        title:"",
-        category:"",
-        description:""
-      })
-      
-  }
+}
   return (
     <Box>
 <Box className="FormBox" border={'1px solid'}>

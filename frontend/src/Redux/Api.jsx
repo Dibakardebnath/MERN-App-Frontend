@@ -22,7 +22,7 @@ export const getPersonalData=(page,value,order)=>async(dispatch)=>{
     const response= await axios.get(`https://lazy-jade-barracuda-tux.cyclic.cloud/dashboard?category=${value}&page=${page}&limit=4&sortby=createdAt&order=${order}`,{
       headers:{
          'Content-Type': 'application/json',
-         'Authorization':`Bearer ${JSON.parse(localStorage.getItem('token'))}`
+         'Authorization':`Bearer ${JSON.parse(sessionStorage.getItem('token'))}`
       }
     })
     
@@ -43,7 +43,7 @@ export const deleteData = (_id) => async (dispatch) => {
      const res = await axios.delete(`https://lazy-jade-barracuda-tux.cyclic.cloud/delete/${_id}`,{
       headers:{
          'Content-Type': 'application/json',
-         'Authorization':`Bearer ${JSON.parse(localStorage.getItem('token'))}`
+         'Authorization':`Bearer ${JSON.parse(sessionStorage.getItem('token'))}`
       }
      })
      console.log("Delete response:", res);
@@ -58,7 +58,7 @@ export const deleteData = (_id) => async (dispatch) => {
      const res = await axios.put(`https://lazy-jade-barracuda-tux.cyclic.cloud/update/${id}`, value, {
        headers: {
          'Content-Type': 'application/json',
-         'Authorization': `Bearer ${JSON.parse(localStorage.getItem('token'))}`
+         'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token'))}`
        }
      });
  
