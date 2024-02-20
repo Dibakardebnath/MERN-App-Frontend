@@ -1,37 +1,30 @@
-import { Box, Button, FormControl, FormLabel, Heading, Input, Stack } from "@chakra-ui/react"
+import { Box, Button, FormControl, FormLabel, Input, Stack } from "@chakra-ui/react"
 import './Create.css'
 import { Footer } from "./Footer";
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import { useDispatch } from "react-redux";
+import { postData } from "../Redux/Api";
 export const Create=()=>{
  
+  const dispatch=useDispatch();
   const [newuser,setNewUser]=useState({
     title:"",
     category:"",
     description:""
   })
-  const handlSub = async (e) => {
-    e.preventDefault();
-    try {
-        const response = await axios.post("https://lazy-jade-barracuda-tux.cyclic.cloud/create", newuser, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${sessionStorage.getItem('token')}`
-            }
-        });
-        if (response.status !== 200) {
-            throw new Error("Failed to create the blog");
-        }
-        // Clear the form
-        setNewUser({
-            title: "",
-            category: "",
-            description: ""
-        });
-    } catch (error) {
-        console.log("Error creating blog", error);
-    }
-}
+  const handlSub=async(e)=>{
+      e.preventDefault();
+      alert("posted")
+      dispatch(postData(newuser));
+   
+      setNewUser({
+        title:"",
+        category:"",
+        description:""
+      })
+      
+  }
   return (
     <Box>
 <Box className="FormBox" border={'1px solid'}>
