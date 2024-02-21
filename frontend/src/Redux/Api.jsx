@@ -40,12 +40,13 @@ export const getPersonalData=(page,value,order)=>async(dispatch)=>{
 
 
 export const postData=(blog)=>async(dispatch)=>{
+  console.log(blog)
   let token=sessionStorage.getItem('token')
   try {
    await axios.post("https://lazy-jade-barracuda-tux.cyclic.cloud/create",blog,{
       headers: {
         'Content-Type': 'application/json',
-        "Authorization": "Bearer " + token,
+        "Authorization": "Bearer "+ token,
       }
     })
   } catch (error) {

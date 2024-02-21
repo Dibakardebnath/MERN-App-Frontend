@@ -80,6 +80,8 @@ const [isModalOpen, setIsModalOpen] = useState(false);
       setPageNo(pageNo+Num)
     }
 
+
+    
     useEffect(()=>{
 
         dispatch(getPersonalData(pageNo,value,order))
@@ -223,7 +225,7 @@ read more
           {pageNo}
           </Flex>
 
-          <Button isDisabled={pageNo===nextBtn || PersonalData.length===0} colorScheme='teal' variant='solid'  onClick={()=>handlePage(1)}>next</Button>
+          <Button isDisabled={pageNo===1} colorScheme='teal' variant='solid'  onClick={()=>handlePage(1)}>next</Button>
 
           </Box>
           <Heading mt={'40px'}>Capture World in Your Own Word's</Heading>
