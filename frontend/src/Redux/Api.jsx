@@ -17,7 +17,7 @@ export const getPublicData = (page) => async (dispatch) => {
 export const getPersonalData = (page, value, order) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/dashboard?category=${value}&page=${page}&limit=4&sortby=createdAt&order=${order}`,
+      `https://lazy-jade-barracuda-tux.cyclic.cloud/dashboard?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,
       {
         headers: {
           "Content-Type": "application/json",
