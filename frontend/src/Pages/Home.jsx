@@ -26,12 +26,8 @@ export const Home = () => {
   // ..................Slider............................
   const sliderImages = [
     "https://wowslider.com/sliders/demo-74/data1/images/newyorkcity336475_1280.jpg",
-    "https://startit.qodeinteractive.com/wp-content/uploads/2015/10/image-slider-1-home-main.jpg",
-    "https://wowslider.com/sliders/demo-74/data1/images/newyorkcity336475_1280.jpg",
-    "https://startit.qodeinteractive.com/wp-content/uploads/2015/10/image-slider-4-home-main.jpg",
-    "https://wowslider.com/sliders/demo-74/data1/images/newyorkcity336475_1280.jpg",
-    "https://startit.qodeinteractive.com/wp-content/uploads/2015/10/image-slider-2-home-main.jpg",
-    "https://wowslider.com/sliders/demo-74/data1/images/newyorkcity336475_1280.jpg",
+    "https://www.i-9intelligence.com/wp-content/uploads/2021/05/Lookout-Services-Home-Slider-1-1920x700-1.jpg",
+    "https://d2m6ke2px6quvq.cloudfront.net/uploads/2020/07/14/f7e90040-c3bb-4e00-b6f3-1d0aed193d3f.jpg",
     "https://wowslider.com/sliders/demo-74/data1/images/newyorkcity336475_1280.jpg",
     "https://wowslider.com/sliders/demo-74/data1/images/london441853_1280.jpg",
   ];
