@@ -1,88 +1,76 @@
-.parentDiv{
-/* border: 1px solid; */
-width: 70%;
-margin: 100px auto;
-
+.parentDiv {
+  /* border: 1px solid; */
+  width: 70%;
+  margin: 100px auto;
 }
 
+.Avatar {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  /* border: 1px solid; */
+  gap: 10px;
+}
 
-.Avatar{
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
+.cardBody {
+  /* background: linear-gradient(red, rgba(255,255,255,)); */
+  background: linear-gradient(to right, #cc9797, #7777c0);
+  color: aliceblue;
+}
+
+.like {
+  background-color: #e6b20a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btnFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .parentDiv {
     /* border: 1px solid; */
-    gap: 10px;
-}
+    width: 90%;
+    margin: 150px auto;
+  }
 
-.cardBody{
-    /* background: linear-gradient(red, rgba(255,255,255,)); */
+  .Avatar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    /* align-items: center;
+            margin-right: 50px; */
+
+    /* gap: 10px; */
+  }
+
+  .cardBody {
     background: linear-gradient(to right, #cc9797, #7777c0);
-      color: aliceblue;
-}
+    color: aliceblue;
+  }
 
-.like{
-    
+  .like {
     background-color: #e6b20a;
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-  
-  
-}
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 
-.btnFlex{
+  .btnFlex {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-   
+  }
 }
 
-@media (max-width:720px){
-    .parentDiv{
-        /* border: 1px solid; */
-        width: 90%;
-        margin: 150px auto;
-        
-        }
-        
-        
-        .Avatar{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        
-            /* align-items: center;
-            margin-right: 50px; */
-          
-            /* gap: 10px; */
-        }
-        
-        .cardBody{
-            background: linear-gradient(to right, #cc9797, #7777c0);
-              color: aliceblue;
-        }
-        
-        .like{
-            background-color: #e6b20a;
-            color: #fff; 
-            border: none; 
-            padding: 10px 20px; 
-            cursor: pointer; 
-          
-          
-        }
-        
-        .btnFlex{
-      
-
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 10px;
-           
-        }
+@media (min-width: 721px) and (max-width: 1024px) {
 }
-
-@media (min-width: 721px) and (max-width: 1024px){}

@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Text,
-  Link,
   Heading,
   Card,
   Flex,
@@ -26,21 +25,18 @@ import { BiLike, BiChat, BiShare } from "react-icons/bi";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-// import "~react-image-gallery/styles/scss/image-gallery.scss";
 import { Footer } from "./Footer";
 import Modal from "react-modal";
 
 export const Dashboard = () => {
   const dispatch = useDispatch();
   const { PersonalData, total } = useSelector((store) => store);
-
   const [id, setId] = useState("");
   const [updateVal, setUpdateVal] = useState({
     title: "",
     category: "",
     description: "",
   });
-  // console.log(updateVal)
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
@@ -352,7 +348,7 @@ export const Dashboard = () => {
         </Flex>
 
         <Button
-          isDisabled={pageNo === 1}
+          isDisabled={pageNo === nextBtn}
           colorScheme="teal"
           variant="solid"
           onClick={() => handlePage(1)}
@@ -367,7 +363,7 @@ export const Dashboard = () => {
         captivating stories that will inspire, nourish, and ignite your
         curiosity.
       </Text>
-    
+
       <ImageGallery
         items={images}
         showFullscreenButton={false}
@@ -377,7 +373,6 @@ export const Dashboard = () => {
         showBullets={true}
       />
 
-     
       <Footer />
     </Box>
   );

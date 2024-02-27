@@ -1,27 +1,24 @@
-.form{
-   
-    width: 50%;
+.form {
+  width: 50%;
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 40px;
+}
+.FormBox {
+  width: 50%;
+
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .FormBox {
+    width: 80%;
+    margin: 100px auto;
     border-radius: 10px;
-    margin: 50px auto;
-    padding: 40px;
-}
-.FormBox{
-   
-      width: 50%;
-     
-      margin: 100px auto;
-      padding: 40px;
-      border-radius: 10px;
-}
-
-@media (max-width:720px){
-    .FormBox{
-   
-        width: 80%;
-        margin: 100px auto;
-        border-radius: 10px;
   }
-
 }
 
-@media (min-width: 721px) and (max-width: 1024px){}
+@media (min-width: 721px) and (max-width: 1024px) {
+}

@@ -27,10 +27,7 @@ export const getPersonalData = (page, value, order) => async (dispatch) => {
         },
       }
     );
-
     dispatch(personalData(response.data));
-
-    //  console.log(response.data.newId)
   } catch (error) {
     console.log(error);
   }
