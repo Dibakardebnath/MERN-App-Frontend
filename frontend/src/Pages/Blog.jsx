@@ -28,17 +28,17 @@ export const Blog = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/dashboard/${id}`,
+        `https://mern-app-1-9y3e.onrender.com/dashboard/${id}`,
         {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${JSON.parse(
-              localStorage.getItem("token")
+              sessionStorage.getItem("token")
             )}`,
           },
         }
       );
-
+  
       if (response.status === 200) {
         setBlogData(response.data.data);
         dispatch(LOGIN(true));

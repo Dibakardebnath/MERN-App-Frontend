@@ -4,7 +4,7 @@ import { DeleteData, GetData, UpdateData, personalData } from "./Action";
 export const getPublicData = (page) => async (dispatch) => {
   try {
     await axios
-      .get(`https://lazy-jade-barracuda-tux.cyclic.cloud/?page=${page}&limit=4`)
+      .get(`https://mern-app-1-9y3e.onrender.com/?page=${page}&limit=4`)
       .then((res) => {
         dispatch(GetData(res.data));
       });
@@ -17,7 +17,7 @@ export const getPublicData = (page) => async (dispatch) => {
 export const getPersonalData = (page, value, order) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/dashboard?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,
+      `https://mern-app-1-9y3e.onrender.com/dashboard?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export const postData = (blog) => async (dispatch) => {
   console.log(token);
   try {
     await axios.post(
-      "https://lazy-jade-barracuda-tux.cyclic.cloud/create",
+      "https://mern-app-1-9y3e.onrender.com/create",
       blog,
       {
         headers: {
@@ -57,7 +57,7 @@ export const deleteData = (_id) => async (dispatch) => {
   try {
     console.log(_id);
     const res = await axios.delete(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/delete/${_id}`,
+      `https://mern-app-1-9y3e.onrender.com/delete/${_id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export const deleteData = (_id) => async (dispatch) => {
 export const updateValue = (id, value) => async (dispatch) => {
   try {
     const res = await axios.put(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/update/${id}`,
+      `https://mern-app-1-9y3e.onrender.com/update/${id}`,
       value,
       {
         headers: {

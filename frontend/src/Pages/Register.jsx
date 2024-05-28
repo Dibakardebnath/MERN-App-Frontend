@@ -29,7 +29,8 @@ export const Register = () => {
   const toggleAuthMode = () => {
     setIsLogin(!isLogin);
   };
-
+//https://mern-app-1-9y3e.onrender.com/
+//https://lazy-jade-barracuda-tux.cyclic.cloud
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
@@ -37,7 +38,7 @@ export const Register = () => {
     try {
       if (isLogin) {
         const response = await axios.post(
-          "https://lazy-jade-barracuda-tux.cyclic.cloud/login",
+          "https://mern-app-1-9y3e.onrender.com/login",
           user,
           {
             headers: { "Content-Type": "application/json" },
@@ -55,7 +56,7 @@ export const Register = () => {
         }
       } else {
         const response = await axios.post(
-          "https://lazy-jade-barracuda-tux.cyclic.cloud/signup",
+          "https://mern-app-1-9y3e.onrender.com/signup",
           user,
           {
             headers: { "Content-Type": "application/json" },
